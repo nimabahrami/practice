@@ -7,14 +7,12 @@ def merge_sort(p1s, p2s, b1, b2, meeting_time):
     p1s = [time_interval_creator(items) for items in p1s]
     b1 = time_interval_creator(b1)
     for items in p1s:
-        for item in items:
-            p1s_flat.append(item)
+            p1s_flat+=items
 
     p2s = [time_interval_creator(items) for items in p2s]
     b2 = time_interval_creator(b2)
     for items in p2s:
-        for item in items:
-            p2s_flat.append(item)
+            p2s_flat+=items
     p1s = p1s_flat
     p2s = p2s_flat
     result = []
